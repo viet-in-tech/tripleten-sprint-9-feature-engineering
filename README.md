@@ -3,6 +3,8 @@
 
 **TripleTen Data Science Program**
 
+**Completed:** January 24, 2026
+
 ---
 
 ## Project Overview
