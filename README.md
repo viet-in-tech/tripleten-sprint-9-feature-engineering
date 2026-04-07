@@ -1,4 +1,6 @@
 # Sprint 9 — Feature Engineering
+
+![Demo](https://viet-in-tech.github.io/churn-prediction-demo.gif)
 ### Beta Bank Customer Churn Prediction
 
 **TripleTen Data Science Program**
