@@ -3,6 +3,8 @@
 ![Demo](https://viet-in-tech.github.io/churn-prediction-demo.gif)
 ### Beta Bank Customer Churn Prediction
 
+**Portfolio write-up:** [Predicting Who Leaves: Beta Bank Customer Churn](https://viet-in-tech.github.io/churn-prediction.html)
+
 **TripleTen Data Science Program**
 
 **Completed:** January 24, 2026
@@ -49,20 +51,20 @@ Beta Bank is losing customers. Research shows retaining existing customers is si
 - Scaled features with `StandardScaler` (fit on train only)
 - Trained baseline models with no imbalance correction:
 
-| Model               | F1 Score | ROC-AUC |
-|---------------------|----------|---------|
-| Logistic Regression | 0.3190   | —       |
-| Decision Tree       | 0.5573   | —       |
-| Random Forest       | 0.5573   | —       |
+| Model | F1 Score | ROC-AUC |
+|---|---|---|
+| Logistic Regression | 0.3190 | — |
+| Decision Tree | 0.5573 | — |
+| Random Forest | 0.5573 | — |
 
 ### Phase 5 — Imbalance Handling & Model Improvement
 Tested three techniques on Random Forest:
 
-| Approach        | F1 Score | ROC-AUC | Passes Target |
-|----------------|----------|---------|---------------|
-| Class Weights   | 0.6381   | 0.8595  | ✅ Yes        |
-| Upsampling      | 0.6173   | —       | ✅ Yes        |
-| Downsampling    | 0.5986   | —       | ✅ Yes        |
+| Approach | F1 Score | ROC-AUC | Passes Target |
+|---|---|---|---|
+| Class Weights | 0.6381 | 0.8595 | ✅ Yes |
+| Upsampling | 0.6173 | — | ✅ Yes |
+| Downsampling | 0.5986 | — | ✅ Yes |
 
 **Selected model:** Random Forest with `class_weight='balanced'` (highest F1, no data loss)
 
@@ -74,10 +76,10 @@ Best params: `max_depth=10`, `min_samples_leaf=2`, `min_samples_split=5`, `n_est
 
 ## Final Test Results
 
-| Metric    | Score  |
-|-----------|--------|
-| F1 Score  | 0.6197 |
-| ROC-AUC   | 0.8618 |
+| Metric | Score |
+|--------|-------|
+| F1 Score | 0.6197 |
+| ROC-AUC | 0.8618 |
 
 **Target F1 ≥ 0.59 → PASSED** (margin: +0.0297)
 
